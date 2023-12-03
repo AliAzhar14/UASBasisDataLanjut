@@ -1,0 +1,46 @@
+GET http://localhost:5000/players
+
+###
+GET http://localhost:5000/teams
+
+###
+POST  http://localhost:5000/teams
+Content-Type: application/json
+
+{
+    "$oid": "656c89dd290c3a691509885e",
+    "team_name": "Mantab",
+    "leader": "Ali",
+    "division": "aov",
+    "prov": "pens, surabaya"
+}
+
+###
+GET http://localhost:5000/teams/656c89dd290c3a691509885e
+
+###
+POST http://localhost:5000/players
+Content-Type: application/json
+
+{
+    "name" : "Ali",
+    "age" : "18",
+    "gender" : "Male",
+    "email" : "ali@gmail.com",
+    "phone" : "082645134589"
+}
+
+###
+PATCH  http://localhost:5000/players/6567efde23ae18ab57c24fcc
+Content-Type: application/json
+
+{
+    "name" : "Ali",
+    "age" : "18",
+    "gender" : "Male",
+    "email" : "ali@gmail.com",
+    "phone" : "082645134589"
+}
+
+###
+DELETE http://localhost:5000/teams/656c8b37f1cc340d2ab9737b
